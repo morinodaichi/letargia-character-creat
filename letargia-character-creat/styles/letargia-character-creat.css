@@ -1,0 +1,255 @@
+/**
+ * LETARGIA CHARACTER CREAT - Styles (Part 1: Variables & Layout)
+ */
+
+.letargia-character-creat {
+  --letargia-bg: #1a1a2e;
+  --letargia-bg-secondary: #16213e;
+  --letargia-bg-tertiary: #0f0f23;
+  --letargia-border: #2a2a4a;
+  --letargia-text: #eaeaea;
+  --letargia-text-muted: #888;
+  --letargia-accent: #4a90d9;
+  --letargia-accent-hover: #5aa0e9;
+  --letargia-danger: #cc3333;
+  --letargia-success: #33cc33;
+  --letargia-warning: #ffaa00;
+  --letargia-radius: 6px;
+  --letargia-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  --letargia-transition: 0.2s ease;
+  
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--letargia-bg);
+  color: var(--letargia-text);
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Header */
+.letargia-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--letargia-border);
+  background: var(--letargia-bg-secondary);
+}
+
+.letargia-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--letargia-accent);
+}
+
+.letargia-actor-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.letargia-actor-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--letargia-border);
+}
+
+.letargia-actor-name {
+  font-weight: 500;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Unsaved Banner */
+.letargia-unsaved-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(255, 170, 0, 0.15);
+  border-bottom: 1px solid var(--letargia-warning);
+  color: var(--letargia-warning);
+  font-size: 12px;
+}
+
+/* Main Layout */
+.letargia-main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.letargia-sidebar {
+  width: 280px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--letargia-border);
+  background: var(--letargia-bg-secondary);
+  overflow-y: auto;
+}
+
+.letargia-composition-panel {
+  border-left: 1px solid var(--letargia-border);
+}
+
+/* Search Box */
+.letargia-search-box {
+  position: relative;
+  padding: 12px;
+  border-bottom: 1px solid var(--letargia-border);
+}
+
+.letargia-search-box i {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--letargia-text-muted);
+}
+
+.letargia-search-input {
+  width: 100%;
+  padding: 8px 12px 8px 36px;
+  border: 1px solid var(--letargia-border);
+  border-radius: var(--letargia-radius);
+  background: var(--letargia-bg-tertiary);
+  color: var(--letargia-text);
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.letargia-search-input:focus {
+  outline: none;
+  border-color: var(--letargia-accent);
+  box-shadow: 0 0 0 2px rgba(74, 144, 217, 0.2);
+}
+
+/* Filters */
+.letargia-filters {
+  padding: 12px;
+  border-bottom: 1px solid var(--letargia-border);
+}
+
+.letargia-filter-group label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--letargia-text-muted);
+  margin-bottom: 4px;
+}
+
+.letargia-theme-select,
+.letargia-pack-select,
+.letargia-base-select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--letargia-border);
+  border-radius: var(--letargia-radius);
+  background: var(--letargia-bg-tertiary);
+  color: var(--letargia-text);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.letargia-theme-select:disabled,
+.letargia-pack-select:disabled,
+.letargia-base-select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.letargia-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  border-bottom: 1px solid var(--letargia-border);
+}
+
+.letargia-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Sidebar Actions */
+.letargia-sidebar-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid var(--letargia-border);
+}
+
+.letargia-sidebar-actions .letargia-btn {
+  justify-content: center;
+}
+
+/* Base Selector in Canvas Toolbar */
+.letargia-base-selector {
+  display: flex;
+  gap: 16px;
+  padding: 8px 12px;
+  background: var(--letargia-bg-tertiary);
+  border-radius: var(--letargia-radius);
+  margin-right: 16px;
+  flex-wrap: wrap;
+}
+
+.letargia-select-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 140px;
+}
+
+.letargia-select-group label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--letargia-text-muted);
+}
+
+.letargia-zoom-display {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--letargia-accent);
+  min-width: 60px;
+  text-align: center;
+}
+
+.letargia-grid-indicator {
+  color: var(--letargia-success);
+  margin-left: 8px;
+}
+
+.letargia-canvas-dropzone {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.letargia-canvas-dropzone.pan-mode .letargia-preview-canvas {
+  cursor: grab;
+}
+
+.letargia-canvas-dropzone.pan-mode .letargia-preview-canvas:active {
+  cursor: grabbing;
+}

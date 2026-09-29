@@ -1,0 +1,67 @@
+<div class="letargia-piece-properties" {{#unless selectedPiece}}style="display:none"{{/unless}}>
+  <h4>{{localize "LETARGIA.CHARACTER_CREAT.Title.PieceProperties"}}</h4>
+  
+  <div class="letargia-property-group">
+    <label>{{localize "LETARGIA.CHARACTER_CREAT.Label.Transform"}}</label>
+    <div class="letargia-transform-controls">
+      <div class="letargia-transform-row">
+        <label>X</label>
+        <input type="number" step="1" class="letargia-transform-input" data-prop="transform.x" value="{{selectedPiece.transform.x}}">
+        <label>Y</label>
+        <input type="number" step="1" class="letargia-transform-input" data-prop="transform.y" value="{{selectedPiece.transform.y}}">
+      </div>
+      <div class="letargia-transform-row">
+        <label>{{localize "LETARGIA.CHARACTER_CREAT.Label.Scale"}}</label>
+        <input type="number" step="0.01" min="0.1" max="10" class="letargia-transform-input" data-prop="transform.scale" value="{{selectedPiece.transform.scale}}">
+        <label>{{localize "LETARGIA.CHARACTER_CREAT.Label.Rotation"}}</label>
+        <input type="number" step="0.1" class="letargia-transform-input" data-prop="transform.rotation" value="{{selectedPiece.transform.rotation}}">
+      </div>
+      <button class="letargia-btn letargia-btn-sm letargia-btn-reset-transform" data-action="reset-transform">
+        <i class="fas fa-undo"></i> {{localize "LETARGIA.CHARACTER_CREAT.Button.ResetTransform"}}
+      </button>
+    </div>
+  </div>
+
+  <div class="letargia-property-group">
+    <label>{{localize "LETARGIA.CHARACTER_CREAT.Label.LayerSettings"}}</label>
+    <div class="letargia-layer-settings">
+      {{#each (lookupPieceMetadata selectedPiece).layers}}
+        <div class="letargia-layer-setting">
+          <span class="letargia-layer-setting-name">{{#if name.[@root.game.i18n.lang]}}{{name.[@root.game.i18n.lang]}}{{else}}{{name.en}}{{else}}{{id}}{{/if}}</span>
+          <div class="letargia-layer-setting-controls">
+            <label class="letargia-toggle">
+              <input type="checkbox" class="letargia-layer-enabled" data-layer-id="{{id}}" {{#if (lookup ../selectedPiece.layers this.id).enabled}}checked{{/if}}> {{localize "LETARGIA.CHARACTER_CREAT.Label.Visible"}}
+            </label>
+            <div class="letargia-opacity-control">
+              <label>{{localize "LETARGIA.CHARACTER_CREAT.Label.Opacity"}}</label>
+              <input type="range" min="0" max="1" step="0.01" class="letargia-opacity-slider" data-layer-id="{{id}}" value="{{(lookup ../selectedPiece.layers this.id).opacity}}">
+              <span class="letargia-opacity-value">{{(lookup ../selectedPiece.layers this.id).opacity}}</span>
+            </div>
+            <select class="letargia-blend-mode" data-layer-id="{{id}}">
+              <option value="normal" {{#ifEquals (lookup ../selectedPiece.layers this.id).blendMode "normal"}}selected{{/ifEquals}}>Normal</option>
+              <option value="multiply" {{#ifEquals (lookup ../selectedPiece.layers this.id).blendMode "multiply"}}selected{{/ifEquals}}>Multiply</option>
+              <option value="screen" {{#ifEquals (lookup ../selectedPiece.layers this.id).blendMode "screen"}}selected{{/ifEquals}}>Screen</option>
+              <option value="overlay" {{#ifEquals (lookup ../selectedPiece.layers this.id).blendMode "overlay"}}selected{{/ifEquals}}>Overlay</option>
+            </select>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+
+  {{#if (lookupPieceMetadata selectedPiece).colorMasks}}
+  <div class="letargia-property-group">
+    <label>{{localize "LETARGIA.CHARACTER_CREAT.Label.ColorMasks"}}</label>
+    <div class="letargia-color-masks">
+      {{#each (lookupPieceMetadata selectedPiece).colorMasks}}
+        <div class="letargia-color-mask">
+          <label>{{#if name.[@root.game.i18n.lang]}}{{name.[@root.game.i18n.lang]}}{{else}}{{name.en}}{{/if}}</label>
+          <input type="color" class="letargia-color-picker" 
+                 data-piece-id="{{../selectedPiece.pieceId}}" data-pack-id="{{../selectedPiece.packId}}" data-color-id="{{id}}"
+                 value="{{../selectedPiece.colorChoices.[id] || color}}">
+        </div>
+      {{/each}}
+    </div>
+  </div>
+  {{/if}}
+</div>

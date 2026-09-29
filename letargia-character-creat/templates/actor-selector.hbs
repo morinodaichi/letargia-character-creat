@@ -1,0 +1,22 @@
+<div class="letargia-actor-selector">
+  <div class="letargia-selector-header">
+    <h3>{{localize "LETARGIA.CHARACTER_CREAT.Dialogs.SelectActor"}}</h3>
+    <p>{{localize "LETARGIA.CHARACTER_CREAT.Dialogs.SelectActorHint"}}</p>
+  </div>
+
+  <div class="letargia-actor-list">
+    {{#each actors}}
+    <div class="letargia-actor-option" data-actor-id="{{id}}">
+      <img src="{{img}}" alt="{{name}}" class="letargia-actor-option-img">
+      <div class="letargia-actor-option-info">
+        <span class="letargia-actor-option-name">{{name}}</span>
+        <span class="letargia-actor-option-type">{{localize (concat "LETARGIA.CHARACTER_CREAT.ActorTypes." type)}}</span>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+
+  <div class="letargia-selector-actions">
+    <button class="letargia-btn letargia-btn-secondary letargia-btn-cancel">{{localize "LETARGIA.CHARACTER_CREAT.Button.Cancel"}}</button>
+  </div>
+</div>

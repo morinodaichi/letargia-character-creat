@@ -1,0 +1,165 @@
+{
+  "LETARGIA": {
+    "CHARACTER_CREAT": {
+      "Title": "LETARGIA CHARACTER CREAT",
+      "Button": {
+        "OpenCreator": "Character Creator",
+        "Save": "Save",
+        "Cancel": "Cancel",
+        "Export": "Export JSON",
+        "Import": "Import JSON",
+        "Reset": "Reset",
+        "Apply": "Apply to Token",
+        "AssetImport": "Asset Import",
+        "Randomize": "Randomize",
+        "ResetTransform": "Reset Transform"
+      },
+      "Tooltip": {
+        "OpenCreator": "Open Character Creator",
+        "RemovePiece": "Remove piece",
+        "Incompatible": "Incompatible: {reason}",
+        "ZoomIn": "Zoom In",
+        "ZoomOut": "Zoom Out",
+        "ResetView": "Reset View",
+        "ToggleGrid": "Toggle Grid",
+        "TogglePan": "Toggle Pan Mode",
+        "ToggleVisibility": "Toggle Visibility",
+        "DragToReorder": "Drag to reorder",
+        "AssetImport": "Import new assets",
+        "Randomize": "Randomize character"
+      },
+      "Label": {
+        "Theme": "Theme",
+        "Body": "Body",
+        "Pose": "Pose",
+        "Perspective": "Perspective",
+        "PiecesLoaded": "pieces loaded",
+        "Pack": "Pack",
+        "Scale": "Scale",
+        "Rotation": "Rotation",
+        "Transform": "Transform",
+        "LayerSettings": "Layer Settings",
+        "LayerOrder": "Layer Order",
+        "PieceProperties": "Piece Properties",
+        "ColorMasks": "Color Masks",
+        "Visible": "Visible",
+        "Opacity": "Opacity",
+        "BlendMode": "Blend Mode"
+      },
+      "Filter": {
+        "AllCategories": "All Categories",
+        "AllThemes": "All Themes",
+        "AllPacks": "All Packs"
+      },
+      "Placeholder": {
+        "SearchPieces": "Search pieces..."
+      },
+      "Hint": {
+        "DropPiecesHere": "Drag pieces here or click to add",
+        "ClickToAdd": "Click pieces on the left to add them"
+      },
+      "EmptyState": {
+        "NoPieces": "No pieces found",
+        "NoPiecesAdded": "No pieces added yet"
+      },
+      "Banner": {
+        "UnsavedChanges": "You have unsaved changes"
+      },
+      "Dialogs": {
+        "SelectActor": "Select Actor",
+        "SelectActorHint": "Choose an actor to edit",
+        "DiscardChanges": "Discard unsaved changes?",
+        "ResetConfirm": "Reset to empty composition?",
+        "ConcurrentModification": "This composition was modified by another user. Overwrite?",
+        "UnsavedChanges": "You have unsaved changes. Are you sure you want to leave?",
+        "BaseChangeIncompatible": "Changing body/pose/perspective will make {count} pieces incompatible. Continue?",
+        "Title": {
+          "Preview": "Preview",
+          "Composition": "Composition",
+          "BaseConfig": "Base Configuration",
+          "LayerOrder": "Layer Order",
+          "PieceProperties": "Piece Properties",
+          "AssetImport": "Asset Import"
+        }
+      },
+      "Notifications": {
+        "NoPermission": "You don't have permission to edit this actor",
+        "NoActors": "No actors available to edit",
+        "PieceAlreadyAdded": "This piece is already in the composition",
+        "Saved": "Composition saved",
+        "SaveFailed": "Failed to save composition",
+        "ValidationFailed": "Composition validation failed",
+        "Exported": "Composition exported",
+        "Imported": "Composition imported",
+        "ImportFailed": "Failed to import composition",
+        "Applied": "Applied to {count} actor(s)",
+        "PartialApply": "Partial application failed for {count} actor(s)",
+        "Randomized": "Character randomized",
+        "NoCompatiblePieces": "No compatible pieces for current base/pose/perspective"
+      },
+      "Categories": {
+        "head": "Head",
+        "torso": "Torso",
+        "arms-hands": "Arms & Hands",
+        "legs-feet": "Legs & Feet",
+        "hair-beard": "Hair & Beard",
+        "clothing": "Clothing",
+        "tattoos-scars": "Tattoos & Scars",
+        "accessories": "Accessories",
+        "held-objects": "Held Objects",
+        "capes-wings-tails-horns": "Capes, Wings, Tails & Horns"
+      },
+      "Themes": {
+        "modern": "Modern",
+        "medieval": "Medieval",
+        "futuristic": "Futuristic"
+      },
+      "ActorTypes": {
+        "character": "Character",
+        "npc": "NPC",
+        "vehicle": "Vehicle"
+      },
+      "AssetImport": {
+        "Title": "Asset Import",
+        "Field": {
+          "ID": "Piece ID",
+          "Name": "Name",
+          "Category": "Category",
+          "Themes": "Themes",
+          "DrawOrder": "Draw Order",
+          "Anchor": "Anchor"
+        },
+        "Error": {
+          "UnsupportedFormat": "Unsupported format. Use PNG, JPEG or WebP.",
+          "FileTooLarge": "File too large. Maximum size: {max}.",
+          "NoPackSelected": "Please select a pack.",
+          "PackNotFound": "Pack not found."
+        },
+        "Success": "Successfully imported {count} piece(s).",
+        "MultiSelect": "{count} pieces selected. Edit individually to set properties.",
+        "UploadToServer": "Upload to server (requires GM)",
+        "UploadHint": "Images will be saved to user data folder for persistence."
+      },
+      "ApplyDialog": {
+        "Title": "Apply Composition",
+        "Description": "Choose where to apply this composition:",
+        "Targets": "Target Actors",
+        "Options": "Options",
+        "UpdateToken": "Update Actor Image",
+        "UpdatePrototype": "Update Prototype Token",
+        "UpdateSelected": "Update Selected Tokens",
+        "Upload": "Upload to Server",
+        "UploadHint": "Requires GM permission. Otherwise image will be downloaded."
+      },
+      "Bodies": {
+        "default-body": "Default Body"
+      },
+      "Poses": {
+        "default-pose": "Default Pose"
+      },
+      "Perspectives": {
+        "default-perspective": "Default Perspective"
+      }
+    }
+  }
+}

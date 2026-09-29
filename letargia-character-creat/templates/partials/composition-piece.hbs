@@ -1,0 +1,24 @@
+<div class="letargia-composition-piece {{#if selected}}selected{{/if}}" data-piece-id="{{pieceId}}" data-pack-id="{{packId}}">
+  <div class="letargia-piece-header">
+    <button class="letargia-piece-visibility" data-action="toggle-piece-visibility" title="{{localize 'LETARGIA.CHARACTER_CREAT.Tooltips.ToggleVisibility'}}">
+      <i class="fas {{#if enabled}}fa-eye{{else}}fa-eye-slash{{/if}}"></i>
+    </button>
+    <span class="letargia-piece-name">{{#if (lookupPieceMetadata this).name.[@root.game.i18n.lang]}}{{(lookupPieceMetadata this).name.[@root.game.i18n.lang]}}{{else}}{{(lookupPieceMetadata this).name.en}}{{else}}{{pieceId}}{{/if}}</span>
+    <button class="letargia-remove-piece" data-piece-id="{{pieceId}}" data-pack-id="{{packId}}" title="{{localize 'LETARGIA.CHARACTER_CREAT.Tooltips.RemovePiece'}}">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  
+  {{#if (lookupPieceMetadata this).colorMasks}}
+    <div class="letargia-color-masks">
+      {{#each (lookupPieceMetadata this).colorMasks}}
+        <div class="letargia-color-mask">
+          <label>{{#if name.[@root.game.i18n.lang]}}{{name.[@root.game.i18n.lang]}}{{else}}{{name.en}}{{/if}}</label>
+          <input type="color" class="letargia-color-picker" 
+                 data-piece-id="{{../pieceId}}" data-pack-id="{{../packId}}" data-color-id="{{id}}"
+                 value="{{../colorChoices.[id] || color}}">
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+</div>

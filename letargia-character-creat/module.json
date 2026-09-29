@@ -1,0 +1,61 @@
+{
+  "id": "letargia-character-creat",
+  "title": "LETARGIA CHARACTER CREAT",
+  "description": "Monta tokens de corpo inteiro em perspectiva elevada oblíqua: vemos topo da cabeça, rosto, tronco, braços, pernas e pés, com encurtamento de perspectiva. Temas moderno, medieval e futurista combináveis.",
+  "version": "0.1.0",
+  "authors": [
+    {
+      "name": "LETARGIA",
+      "url": "https://github.com/SEU-USUARIO"
+    }
+  ],
+  "license": "MIT",
+  "url": "https://github.com/SEU-USUARIO/letargia-character-creat",
+  "manifest": "https://github.com/SEU-USUARIO/letargia-character-creat/releases/latest/download/module.json",
+  "download": "https://github.com/SEU-USUARIO/letargia-character-creat/releases/latest/download/module.zip",
+  "bugs": "https://github.com/SEU-USUARIO/letargia-character-creat/issues",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "esmodules": [
+    "scripts/letargia-character-creat.mjs"
+  ],
+  "styles": [
+    "styles/letargia-character-creat.css",
+    "styles/letargia-character-creat-part2.css",
+    "styles/letargia-character-creat-part3.css",
+    "styles/letargia-character-creat-part4.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "demo-pieces",
+      "label": "Demo Pieces",
+      "path": "packs/demo-pieces",
+      "type": "Item",
+      "system": "letargia-character-creat",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "flags": {
+    "letargia-character-creat": {
+      "schemaVersion": 1,
+      "apiVersion": 1
+    }
+  }
+}

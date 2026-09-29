@@ -1,0 +1,65 @@
+<aside class="letargia-sidebar">
+  <div class="letargia-search-box">
+    <i class="fas fa-search"></i>
+    <input type="text" class="letargia-search-input" placeholder="{{localize 'LETARGIA.CHARACTER_CREAT.Placeholder.SearchPieces'}}" value="{{searchQuery}}">
+  </div>
+
+  <div class="letargia-filters">
+    <div class="letargia-filter-group">
+      <label for="pack-select">{{localize "LETARGIA.CHARACTER_CREAT.Label.Pack"}}</label>
+      <select id="pack-select" class="letargia-pack-select">
+        <option value="all">{{localize "LETARGIA.CHARACTER_CREAT.Filter.AllPacks"}}</option>
+        {{#each packs}}
+        <option value="{{id}}" {{#ifEquals id ../selectedPack}}selected{{/ifEquals}}>{{label}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="letargia-filter-group">
+      <label for="theme-select">{{localize "LETARGIA.CHARACTER_CREAT.Label.Theme"}}</label>
+      <select id="theme-select" class="letargia-theme-select">
+        <option value="all">{{localize "LETARGIA.CHARACTER_CREAT.Filter.AllThemes"}}</option>
+        {{#each themes}}
+        <option value="{{this}}" {{#ifEquals this ../selectedTheme}}selected{{/ifEquals}}>{{localize (concat "LETARGIA.CHARACTER_CREAT.Themes." this)}}</option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+
+  <div class="letargia-category-tabs" role="tablist">
+    <button class="letargia-category-tab active" data-category="all" role="tab" aria-selected="true">
+      {{localize "LETARGIA.CHARACTER_CREAT.Filter.AllCategories"}}
+    </button>
+    {{#each categories}}
+      {{#ifNeq @key "all"}}
+      <button class="letargia-category-tab" data-category="{{@key}}" role="tab" aria-selected="false">
+        {{localize (concat "LETARGIA.CHARACTER_CREAT.Categories." @key)}}
+        <span class="letargia-category-count">{{this.length}}</span>
+      </button>
+      {{/ifNeq}}
+    {{/each}}
+  </div>
+
+  <div class="letargia-piece-list-container">
+    <div class="letargia-piece-list">
+      {{#if categories.[selectedCategory]}}
+        {{#each categories.[selectedCategory]}}
+          {{> piece-item}}
+        {{/each}}
+      {{else}}
+        <div class="letargia-empty-state">
+          <i class="fas fa-search"></i>
+          <p>{{localize "LETARGIA.CHARACTER_CREAT.EmptyState.NoPieces"}}</p>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+
+  <div class="letargia-sidebar-actions">
+    <button class="letargia-btn letargia-btn-secondary letargia-btn-asset-import" title="{{localize 'LETARGIA.CHARACTER_CREAT.Tooltips.AssetImport'}}">
+      <i class="fas fa-plus"></i> {{localize "LETARGIA.CHARACTER_CREAT.Button.AssetImport"}}
+    </button>
+    <button class="letargia-btn letargia-btn-secondary letargia-btn-randomize" title="{{localize 'LETARGIA.CHARACTER_CREAT.Tooltips.Randomize'}}">
+      <i class="fas fa-random"></i> {{localize "LETARGIA.CHARACTER_CREAT.Button.Randomize"}}
+    </button>
+  </div>
+</aside>

@@ -1,0 +1,52 @@
+<main class="letargia-canvas-area">
+  <div class="letargia-canvas-toolbar">
+    <div class="letargia-base-selector">
+      <div class="letargia-select-group">
+        <label for="body-select">{{localize "LETARGIA.CHARACTER_CREAT.Label.Body"}}</label>
+        <select id="body-select" class="letargia-base-select" {{#if composition.baseLocked}}disabled{{/if}}>
+          {{#each bodies}}
+          <option value="{{id}}" {{#ifEquals id ../composition.base.bodyId}}selected{{/ifEquals}}>{{label}}</option>
+          {{/each}}
+        </select>
+      </div>
+      <div class="letargia-select-group">
+        <label for="pose-select">{{localize "LETARGIA.CHARACTER_CREAT.Label.Pose"}}</label>
+        <select id="pose-select" class="letargia-base-select" {{#if composition.baseLocked}}disabled{{/if}}>
+          {{#each poses}}
+          <option value="{{id}}" {{#ifEquals id ../composition.base.poseId}}selected{{/ifEquals}}>{{label}}</option>
+          {{/each}}
+        </select>
+      </div>
+      <div class="letargia-select-group">
+        <label for="perspective-select">{{localize "LETARGIA.CHARACTER_CREAT.Label.Perspective"}}</label>
+        <select id="perspective-select" class="letargia-base-select" {{#if composition.baseLocked}}disabled{{/if}}>
+          {{#each perspectives}}
+          <option value="{{id}}" {{#ifEquals id ../composition.base.perspectiveId}}selected{{/ifEquals}}>{{label}}</option>
+          {{/each}}
+        </select>
+      </div>
+    </div>
+
+    <div class="letargia-canvas-title">{{localize "LETARGIA.CHARACTER_CREAT.Title.Preview"}}</div>
+    
+    <div class="letargia-canvas-controls">
+      <button class="letargia-btn-icon" title="{{localize 'LETARGIA.CHARACTER_CREAT.Tooltips.ZoomIn'}}" data-action="zoom-in"><i class="fas fa-search-plus"></i></button>
+      <button class="letargia-btn-icon" title="{{localize 'LETARGIA.CHARACTER_CREAT.Tooltips.ZoomOut'}}" data-action="zoom-out"><i class="fas fa-search-minus"></i></button>
+      <button class="letargia-btn-icon" title="{{localize 'LETARGIA.CHARACTER_CREAT.Tooltips.ResetView'}}" data-action="reset-view"><i class="fas fa-expand-arrows-alt"></i></button>
+      <button class="letargia-btn-icon" title="{{localize 'LETARGIA.CHARACTER_CREAT.Tooltips.ToggleGrid'}}" data-action="toggle-grid"><i class="fas fa-th"></i></button>
+      <button class="letargia-btn-icon" title="{{localize 'LETARGIA.CHARACTER_CREAT.Tooltips.TogglePan'}}" data-action="toggle-pan"><i class="fas fa-hand-paper"></i></button>
+      <span class="letargia-zoom-display">{{multiply viewport.scale 100}}%</span>
+    </div>
+  </div>
+  
+  <div class="letargia-canvas-dropzone">
+    <canvas class="letargia-preview-canvas" width="{{composition.exportOptions.canvasWidth}}" height="{{composition.exportOptions.canvasHeight}}"></canvas>
+    <div class="letargia-drop-hint">{{localize "LETARGIA.CHARACTER_CREAT.Hint.DropPiecesHere"}}</div>
+  </div>
+  
+  <div class="letargia-canvas-info">
+    <span class="letargia-piece-count">{{composition.pieces.length}} {{localize "LETARGIA.CHARACTER_CREAT.Label.PiecesLoaded"}}</span>
+    <span class="letargia-canvas-size">{{composition.exportOptions.canvasWidth}} × {{composition.exportOptions.canvasHeight}}</span>
+    {{#if viewport.showGrid}}<span class="letargia-grid-indicator"><i class="fas fa-th"></i></span>{{/if}}
+  </div>
+</main>

@@ -1,0 +1,165 @@
+{
+  "LETARGIA": {
+    "CHARACTER_CREAT": {
+      "Title": "LETARGIA CHARACTER CREAT",
+      "Button": {
+        "OpenCreator": "Criador de Personagem",
+        "Save": "Salvar",
+        "Cancel": "Cancelar",
+        "Export": "Exportar JSON",
+        "Import": "Importar JSON",
+        "Reset": "Resetar",
+        "Apply": "Aplicar ao Token",
+        "AssetImport": "Importar Assets",
+        "Randomize": "Aleatorizar",
+        "ResetTransform": "Resetar Transformação"
+      },
+      "Tooltip": {
+        "OpenCreator": "Abrir Criador de Personagem",
+        "RemovePiece": "Remover peça",
+        "Incompatible": "Incompatível: {reason}",
+        "ZoomIn": "Aproximar",
+        "ZoomOut": "Afastar",
+        "ResetView": "Resetar Visualização",
+        "ToggleGrid": "Alternar Grade",
+        "TogglePan": "Alternar Modo Pan",
+        "ToggleVisibility": "Alternar Visibilidade",
+        "DragToReorder": "Arraste para reordenar",
+        "AssetImport": "Importar novos assets",
+        "Randomize": "Aleatorizar personagem"
+      },
+      "Label": {
+        "Theme": "Tema",
+        "Body": "Corpo",
+        "Pose": "Pose",
+        "Perspective": "Perspectiva",
+        "PiecesLoaded": "peças carregadas",
+        "Pack": "Pacote",
+        "Scale": "Escala",
+        "Rotation": "Rotação",
+        "Transform": "Transformação",
+        "LayerSettings": "Configurações de Camada",
+        "LayerOrder": "Ordem das Camadas",
+        "PieceProperties": "Propriedades da Peça",
+        "ColorMasks": "Máscaras de Cor",
+        "Visible": "Visível",
+        "Opacity": "Opacidade",
+        "BlendMode": "Modo de Mescla"
+      },
+      "Filter": {
+        "AllCategories": "Todas as Categorias",
+        "AllThemes": "Todos os Temas",
+        "AllPacks": "Todos os Pacotes"
+      },
+      "Placeholder": {
+        "SearchPieces": "Buscar peças..."
+      },
+      "Hint": {
+        "DropPiecesHere": "Arraste peças aqui ou clique para adicionar",
+        "ClickToAdd": "Clique nas peças à esquerda para adicioná-las"
+      },
+      "EmptyState": {
+        "NoPieces": "Nenhuma peça encontrada",
+        "NoPiecesAdded": "Nenhuma peça adicionada ainda"
+      },
+      "Banner": {
+        "UnsavedChanges": "Você tem alterações não salvas"
+      },
+      "Dialogs": {
+        "SelectActor": "Selecionar Ator",
+        "SelectActorHint": "Escolha um ator para editar",
+        "DiscardChanges": "Descartar alterações não salvas?",
+        "ResetConfirm": "Resetar para composição vazia?",
+        "ConcurrentModification": "Esta composição foi modificada por outro usuário. Sobrescrever?",
+        "UnsavedChanges": "Você tem alterações não salvas. Tem certeza que deseja sair?",
+        "BaseChangeIncompatible": "Mudar corpo/pose/perspectiva tornará {count} peças incompatíveis. Continuar?",
+        "Title": {
+          "Preview": "Prévia",
+          "Composition": "Composição",
+          "BaseConfig": "Configuração Base",
+          "LayerOrder": "Ordem das Camadas",
+          "PieceProperties": "Propriedades da Peça",
+          "AssetImport": "Importar Assets"
+        }
+      },
+      "Notifications": {
+        "NoPermission": "Você não tem permissão para editar este ator",
+        "NoActors": "Nenhum ator disponível para edição",
+        "PieceAlreadyAdded": "Esta peça já está na composição",
+        "Saved": "Composição salva",
+        "SaveFailed": "Falha ao salvar composição",
+        "ValidationFailed": "Validação da composição falhou",
+        "Exported": "Composição exportada",
+        "Imported": "Composição importada",
+        "ImportFailed": "Falha ao importar composição",
+        "Applied": "Aplicado a {count} ator(es)",
+        "PartialApply": "Aplicação parcial falhou para {count} ator(es)",
+        "Randomized": "Personagem aleatorizado",
+        "NoCompatiblePieces": "Nenhuma peça compatível para o corpo/pose/perspectiva atual"
+      },
+      "Categories": {
+        "head": "Cabeça",
+        "torso": "Tronco",
+        "arms-hands": "Braços e Mãos",
+        "legs-feet": "Pernas e Pés",
+        "hair-beard": "Cabelo e Barba",
+        "clothing": "Roupas",
+        "tattoos-scars": "Tatuagens e Cicatrizes",
+        "accessories": "Acessórios",
+        "held-objects": "Objetos Segurados",
+        "capes-wings-tails-horns": "Capas, Asas, Caudas e Chifres"
+      },
+      "Themes": {
+        "modern": "Moderno",
+        "medieval": "Medieval",
+        "futuristic": "Futurista"
+      },
+      "ActorTypes": {
+        "character": "Personagem",
+        "npc": "NPC",
+        "vehicle": "Veículo"
+      },
+      "AssetImport": {
+        "Title": "Importar Assets",
+        "Field": {
+          "ID": "ID da Peça",
+          "Name": "Nome",
+          "Category": "Categoria",
+          "Themes": "Temas",
+          "DrawOrder": "Ordem de Desenho",
+          "Anchor": "Âncora"
+        },
+        "Error": {
+          "UnsupportedFormat": "Formato não suportado. Use PNG, JPEG ou WebP.",
+          "FileTooLarge": "Arquivo muito grande. Tamanho máximo: {max}.",
+          "NoPackSelected": "Por favor, selecione um pacote.",
+          "PackNotFound": "Pacote não encontrado."
+        },
+        "Success": "Importados {count} peça(s) com sucesso.",
+        "MultiSelect": "{count} peças selecionadas. Edite individualmente para definir propriedades.",
+        "UploadToServer": "Enviar para o servidor (requer Mestre)",
+        "UploadHint": "Imagens serão salvas na pasta de dados do usuário para persistência."
+      },
+      "ApplyDialog": {
+        "Title": "Aplicar Composição",
+        "Description": "Escolha onde aplicar esta composição:",
+        "Targets": "Atores Alvo",
+        "Options": "Opções",
+        "UpdateToken": "Atualizar Imagem do Ator",
+        "UpdatePrototype": "Atualizar Token Protótipo",
+        "UpdateSelected": "Atualizar Tokens Selecionados",
+        "Upload": "Enviar para Servidor",
+        "UploadHint": "Requer permissão de Mestre. Caso contrário, a imagem será baixada."
+      },
+      "Bodies": {
+        "default-body": "Corpo Padrão"
+      },
+      "Poses": {
+        "default-pose": "Pose Padrão"
+      },
+      "Perspectives": {
+        "default-perspective": "Perspectiva Padrão"
+      }
+    }
+  }
+}

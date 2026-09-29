@@ -1,0 +1,62 @@
+{
+  "id": "letargia-demo-pack",
+  "schemaVersion": 1,
+  "apiVersion": 1,
+  "version": "1.0.0",
+  "author": "LETARGIA",
+  "license": "MIT",
+  "name": { "pt-BR": "Pacote Demo LETARGIA", "en": "LETARGIA Demo Pack" },
+  "description": { "pt-BR": "Pacote de demonstração com peças geométricas para teste", "en": "Demo pack with geometric pieces for testing" },
+  "bases": {
+    "default-body": {
+      "id": "default-body",
+      "name": { "pt-BR": "Corpo Padrão", "en": "Default Body" },
+      "canvas": { "width": 1024, "height": 1024 },
+      "anchors": {
+        "head": { "x": 0.5, "y": 0.15 },
+        "torso": { "x": 0.5, "y": 0.4 },
+        "leftArm": { "x": 0.2, "y": 0.55 },
+        "rightArm": { "x": 0.8, "y": 0.55 },
+        "leftLeg": { "x": 0.35, "y": 0.85 },
+        "rightLeg": { "x": 0.65, "y": 0.85 }
+      }
+    }
+  },
+  "poses": {
+    "default-pose": { "id": "default-pose", "name": { "pt-BR": "Pose Padrão", "en": "Default Pose" } }
+  },
+  "perspectives": {
+    "default-perspective": { "id": "default-perspective", "name": { "pt-BR": "Perspectiva Padrão", "en": "Default Perspective" } }
+  },
+  "categories": {
+    "demo-head": { "name": { "pt-BR": "Cabeça Demo", "en": "Demo Head" }, "description": { "pt-BR": "Peças de cabeça para demonstração", "en": "Demo head pieces" } },
+    "demo-torso": { "name": { "pt-BR": "Tronco Demo", "en": "Demo Torso" }, "description": { "pt-BR": "Peças de tronco para demonstração", "en": "Demo torso pieces" } }
+  },
+  "themes": {
+    "demo": { "name": { "pt-BR": "Demonstração", "en": "Demo" }, "description": { "pt-BR": "Tema de demonstração", "en": "Demo theme" } }
+  },
+  "pieces": [
+    {
+      "id": "head-circle",
+      "category": "demo-head",
+      "themes": ["demo"],
+      "compatibility": { "bodies": ["*"], "poses": ["*"], "perspectives": ["*"] },
+      "layers": [
+        { "id": "base", "image": "modules/letargia-character-creat/packs/letargia-demo-pack/assets/head-circle-base.svg", "position": { "x": 0, "y": 0 }, "blendMode": "normal", "opacity": 1, "visible": true, "layerType": "base", "zOffset": 0 },
+        { "id": "hair", "image": "modules/letargia-character-creat/packs/letargia-demo-pack/assets/head-circle-hair.svg", "position": { "x": -10, "y": -20 }, "blendMode": "normal", "opacity": 1, "visible": true, "layerType": "hair", "zOffset": 1 }
+      ],
+      "thumbnail": "modules/letargia-character-creat/packs/letargia-demo-pack/thumbnails/head-circle.png",
+      "drawOrder": 10,
+      "anchor": { "x": 0.5, "y": 0.3 },
+      "offset": { "x": 0, "y": 0 },
+      "scale": 1,
+      "rotation": 0,
+      "slots": ["head"],
+      "colorMasks": [
+        { "id": "skin", "name": { "pt-BR": "Pele", "en": "Skin" }, "layerId": "base", "color": "#FFDBCC", "maskType": "fill" },
+        { "id": "hair", "name": { "pt-BR": "Cabelo", "en": "Hair" }, "layerId": "hair", "color": "#8B4513", "maskType": "fill" }
+      ],
+      "metadata": { "name": { "pt-BR": "Cabeça Redonda", "en": "Round Head" } }
+    }
+  ]
+}

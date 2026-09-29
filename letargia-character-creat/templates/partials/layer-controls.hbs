@@ -1,0 +1,17 @@
+<div class="letargia-layer-controls" {{#unless composition.pieces.length}}style="display:none"{{/unless}}>
+  <h4>{{localize "LETARGIA.CHARACTER_CREAT.Title.LayerOrder"}}</h4>
+  <div class="letargia-layer-list" data-drag-handle=".letargia-layer-handle">
+    {{#each composition.pieces}}
+      <div class="letargia-layer-item {{#if selected}}selected{{/if}}" data-piece-id="{{pieceId}}" data-pack-id="{{packId}}">
+        <i class="fas fa-grip-vertical letargia-layer-handle" title="{{localize 'LETARGIA.CHARACTER_CREAT.Tooltips.DragToReorder'}}"></i>
+        <span class="letargia-layer-name">{{#if (lookupPieceMetadata this).name.[@root.game.i18n.lang]}}{{(lookupPieceMetadata this).name.[@root.game.i18n.lang]}}{{else}}{{(lookupPieceMetadata this).name.en}}{{else}}{{pieceId}}{{/if}}</span>
+        <button class="letargia-layer-visibility" data-action="toggle-visibility" title="{{localize 'LETARGIA.CHARACTER_CREAT.Tooltips.ToggleVisibility'}}">
+          <i class="fas {{#if enabled}}fa-eye{{else}}fa-eye-slash{{/if}}"></i>
+        </button>
+        <button class="letargia-layer-remove" data-action="remove-layer" title="{{localize 'LETARGIA.CHARACTER_CREAT.Tooltips.RemovePiece'}}">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    {{/each}}
+  </div>
+</div>

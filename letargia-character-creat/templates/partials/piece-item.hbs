@@ -1,0 +1,13 @@
+<div class="letargia-piece-item {{#if _incompatible}}incompatible{{/if}}" 
+     data-piece-id="{{_fullId}}" 
+     draggable="true"
+     title="{{#if _incompatible}}{{localize "LETARGIA.CHARACTER_CREAT.Tooltips.Incompatible" reason=_compatReason}}{{/if}}">
+  <img src="{{thumbnail}}" alt="" class="letargia-piece-thumb" loading="lazy">
+  <div class="letargia-piece-info">
+    <span class="letargia-piece-name">{{#if metadata.name.[@root.game.i18n.lang]}}{{metadata.name.[@root.game.i18n.lang]}}{{else}}{{metadata.name.en}}{{else}}{{id}}{{/if}}</span>
+    <span class="letargia-piece-category">{{localize (concat "LETARGIA.CHARACTER_CREAT.Categories." category)}}</span>
+  </div>
+  {{#if _incompatible}}
+  <span class="letargia-incompatible-badge"><i class="fas fa-exclamation-triangle"></i></span>
+  {{/if}}
+</div>

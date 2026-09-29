@@ -1,0 +1,191 @@
+/**
+ * LETARGIA CHARACTER CREAT - Styles (Part 4: Actions, Actor Selector, Utils)
+ */
+
+/* Actions */
+.letargia-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 16px;
+  border-top: 1px solid var(--letargia-border);
+}
+
+.letargia-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid var(--letargia-border);
+  border-radius: var(--letargia-radius);
+  background: var(--letargia-bg-tertiary);
+  color: var(--letargia-text);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--letargia-transition);
+}
+
+.letargia-btn:hover {
+  border-color: var(--letargia-accent);
+  background: var(--letargia-bg-secondary);
+}
+
+.letargia-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(74, 144, 217, 0.3);
+}
+
+.letargia-btn-primary {
+  background: var(--letargia-accent);
+  border-color: var(--letargia-accent);
+  color: white;
+}
+
+.letargia-btn-primary:hover {
+  background: var(--letargia-accent-hover);
+  border-color: var(--letargia-accent-hover);
+}
+
+.letargia-btn-danger {
+  border-color: var(--letargia-danger);
+  color: var(--letargia-danger);
+}
+
+.letargia-btn-danger:hover {
+  background: rgba(204, 51, 51, 0.1);
+  border-color: var(--letargia-danger);
+}
+
+/* Actor Selector */
+.letargia-actor-selector {
+  padding: 16px;
+}
+
+.letargia-selector-header {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.letargia-selector-header h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+
+.letargia-selector-header p {
+  margin: 0;
+  color: var(--letargia-text-muted);
+  font-size: 12px;
+}
+
+.letargia-actor-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.letargia-actor-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--letargia-border);
+  border-radius: var(--letargia-radius);
+  background: var(--letargia-bg-tertiary);
+  cursor: pointer;
+  transition: var(--letargia-transition);
+}
+
+.letargia-actor-option:hover {
+  border-color: var(--letargia-accent);
+  background: var(--letargia-bg-secondary);
+}
+
+.letargia-actor-option-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--letargia-border);
+}
+
+.letargia-actor-option-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.letargia-actor-option-name {
+  font-weight: 500;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.letargia-actor-option-type {
+  font-size: 11px;
+  color: var(--letargia-text-muted);
+  text-transform: capitalize;
+}
+
+.letargia-selector-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--letargia-border);
+}
+
+/* Scrollbar */
+.letargia-sidebar::-webkit-scrollbar,
+.letargia-composition-list::-webkit-scrollbar,
+.letargia-actor-list::-webkit-scrollbar,
+.letargia-piece-list-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.letargia-sidebar::-webkit-scrollbar-track,
+.letargia-composition-list::-webkit-scrollbar-track,
+.letargia-actor-list::-webkit-scrollbar-track,
+.letargia-piece-list-container::-webkit-scrollbar-track {
+  background: var(--letargia-bg);
+}
+
+.letargia-sidebar::-webkit-scrollbar-thumb,
+.letargia-composition-list::-webkit-scrollbar-thumb,
+.letargia-actor-list::-webkit-scrollbar-thumb,
+.letargia-piece-list-container::-webkit-scrollbar-thumb {
+  background: var(--letargia-border);
+  border-radius: 4px;
+}
+
+.letargia-sidebar::-webkit-scrollbar-thumb:hover,
+.letargia-composition-list::-webkit-scrollbar-thumb:hover,
+.letargia-actor-list::-webkit-scrollbar-thumb:hover,
+.letargia-piece-list-container::-webkit-scrollbar-thumb:hover {
+  background: var(--letargia-accent);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .letargia-main {
+    flex-direction: column;
+  }
+  
+  .letargia-sidebar {
+    width: 100%;
+    max-height: 300px;
+    border-right: none;
+    border-bottom: 1px solid var(--letargia-border);
+  }
+  
+  .letargia-composition-panel {
+    border-left: none;
+    border-top: 1px solid var(--letargia-border);
+  }
+}

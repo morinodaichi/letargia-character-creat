@@ -1,0 +1,31 @@
+<aside class="letargia-sidebar letargia-composition-panel">
+  <div class="letargia-panel-header">
+    <h3>{{localize "LETARGIA.CHARACTER_CREAT.Title.Composition"}}</h3>
+  </div>
+
+  <div class="letargia-composition-list">
+    {{#if composition.pieces.length}}
+      {{#each composition.pieces}}
+        {{> composition-piece}}
+      {{/each}}
+    {{else}}
+      <div class="letargia-empty-state">
+        <i class="fas fa-user-plus"></i>
+        <p>{{localize "LETARGIA.CHARACTER_CREAT.EmptyState.NoPiecesAdded"}}</p>
+        <small>{{localize "LETARGIA.CHARACTER_CREAT.Hint.ClickToAdd"}}</small>
+      </div>
+    {{/if}}
+  </div>
+
+  {{> layer-controls}}
+  {{> piece-properties}}
+
+  <div class="letargia-actions">
+    <button class="letargia-btn letargia-btn-primary letargia-btn-save"><i class="fas fa-save"></i> {{localize "LETARGIA.CHARACTER_CREAT.Button.Save"}}</button>
+    <button class="letargia-btn letargia-btn-secondary letargia-btn-cancel"><i class="fas fa-undo"></i> {{localize "LETARGIA.CHARACTER_CREAT.Button.Cancel"}}</button>
+    <button class="letargia-btn letargia-btn-secondary letargia-btn-export"><i class="fas fa-download"></i> {{localize "LETARGIA.CHARACTER_CREAT.Button.Export"}}</button>
+    <button class="letargia-btn letargia-btn-secondary letargia-btn-import"><i class="fas fa-upload"></i> {{localize "LETARGIA.CHARACTER_CREAT.Button.Import"}}</button>
+    <button class="letargia-btn letargia-btn-secondary letargia-btn-apply"><i class="fas fa-share"></i> {{localize "LETARGIA.CHARACTER_CREAT.Button.Apply"}}</button>
+    <button class="letargia-btn letargia-btn-danger letargia-btn-reset"><i class="fas fa-trash"></i> {{localize "LETARGIA.CHARACTER_CREAT.Button.Reset"}}</button>
+  </div>
+</aside>

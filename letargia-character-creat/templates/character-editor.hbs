@@ -1,0 +1,22 @@
+<div class="letargia-character-creat-editor">
+  <div class="letargia-header">
+    <h2 class="letargia-title">{{localize "LETARGIA.CHARACTER_CREAT.Title"}}</h2>
+    <div class="letargia-actor-info">
+      <img src="{{actor.img}}" alt="{{actor.name}}" class="letargia-actor-img">
+      <span class="letargia-actor-name">{{actor.name}}</span>
+    </div>
+  </div>
+
+  {{#if hasUnsavedChanges}}
+  <div class="letargia-unsaved-banner">
+    <i class="fas fa-exclamation-circle"></i>
+    {{localize "LETARGIA.CHARACTER_CREAT.Banner.UnsavedChanges"}}
+  </div>
+  {{/if}}
+
+  <div class="letargia-main">
+    {{> sidebar}}
+    {{> canvas-area}}
+    {{> composition-panel}}
+  </div>
+</div>
